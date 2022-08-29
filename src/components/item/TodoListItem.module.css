@@ -1,0 +1,10 @@
+.todoItem {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+
+  height: 50px;
+  color: var(--text-color);
+  border-top: 1px solid var(--foreground-highlight);
+}
+

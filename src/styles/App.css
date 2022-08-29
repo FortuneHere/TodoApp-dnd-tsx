@@ -1,0 +1,36 @@
+
+:root {
+  --background: hsl(0, 77%, 63%);
+  --foreground: hsl(0, 0%, 100%);
+  --my-color-test1: hsl(186, 80%, 32%);
+  --my-color-test2: hsl(62, 61%, 57%);
+  --text-color: hsl(0, 0%, 35%);
+  --shadow: hsl(0, 0%, 20%);
+}
+
+div, input, p, h1, span {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+
+  /* Выравниваем контейнер */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background);
+  min-height: 100vh;
+  padding: 20px;
+  margin: -10px;
+}
+
+/* Контейнер */
+.page {
+  display: flex;
+  flex-direction: column;
+  background: var(--foreground);
+  min-height: 80vh;
+  min-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px var(--shadow);
+}
