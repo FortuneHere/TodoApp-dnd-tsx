@@ -1,6 +1,7 @@
-import React, { FC } from "react";
-import cl from "./TodoList.module.css";
-import TodoListItem from "../item/TodoListItem";
+import React, { FC } from 'react';
+import cl from './TodoList.module.css';
+import TodoListItem from '../item/TodoListItem';
+import { Droppable } from 'react-beautiful-dnd';
 
 interface Props {
   todos: Todo[];
@@ -8,14 +9,28 @@ interface Props {
   remove: RemoveTodo;
 }
 
-const TodoList: FC<Props> = ({todos, toggleTodo, remove}) => {
-
+const TodoList: FC<Props> = ({ todos, toggleTodo, remove }) => {
   return (
-    <div className={cl.list}>
-      {todos.map((todo)=> (
-      <TodoListItem key={todo.id} todo={todo} toggleTodo={toggleTodo} removeTodoItem={remove} />
-      ))}
-    </div>
+    <Droppable droppableId="TodoList">
+      {(provided, snapshot) => (
+        <div
+          className={cl.list}
+          ref={provided.innerRef}
+          {...provided.droppableProps}
+        >
+          {todos.map((todo, index) => (
+            <TodoListItem
+              index={index}
+              key={todo.id}
+              todo={todo}
+              toggleTodo={toggleTodo}
+              removeTodoItem={remove}
+            />
+          ))}
+          {provided.placeholder}
+        </div>
+      )}
+    </Droppable>
   );
 };
 

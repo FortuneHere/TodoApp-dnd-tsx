@@ -6,7 +6,7 @@ interface Todo {
 
 type ToggleTodo = (selectedTodo: Todo) => void;
 
-type AddTodo = (title: string, task: string) => void;
+type AddTodo = (task: string) => void;
 
 type RemoveTodo = (todo: Todo) => void;
 
