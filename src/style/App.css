@@ -1,0 +1,48 @@
+:root {
+  --background: #e65e72;
+  --foreground: #fefefe;
+  --foreground-colored: #76c5d6;
+  --text-color: #262626;
+  --shadow: #333333;
+  
+  /* Pie Party */
+  --red-dark: #72000e;
+  --red-light: #bd0829;
+  --red-lighter: #ca2241;
+  --light-wood: #e3b874;
+  --lighter-wood: #e5d3a8;
+
+  /* CS04 */
+  --light-yellow: #b1b359;
+  --light-purple: #383d61;
+  --light-cyan: #76c5d6;
+  --light-cream: #d7ede1;
+  --light-pink: #e65e72;
+  --light-blue: #0c5da9;
+  --dark-blue: #0211bafb;
+  --transparent-grey: #f3f3f3;
+}
+
+div,
+input,
+p,
+h1,
+span {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+.app {
+  background: var(--background);
+  min-height: 100vh;
+  padding: 10px;
+  margin: -10px;
+}
+
+.page {
+  background: var(--foreground);
+  min-height: 80vh;
+  min-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px var(--shadow);
+}

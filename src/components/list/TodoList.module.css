@@ -1,5 +1,5 @@
 .list{
+  display: inline-block;
   border: 2px solid black;
-  align-self: center;
   width: 50vh;
 }

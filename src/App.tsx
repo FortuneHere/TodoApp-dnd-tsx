@@ -1,9 +1,9 @@
 import React, { FC, useState } from 'react';
-import './styles/App.css';
+import './style/App.css';
 import data from './data.json';
 import TodoList from './components/list/TodoList';
-import TodoForm from './components/form/TodoForm';
-import Header from './components/UI/header/Header';
+import MyForm from './components/form/MyForm';
+import MyHead from './components/UI/head/MyHead';
 import { DragDropContext, DropResult } from 'react-beautiful-dnd';
 
 const initialTodos: Todo[] = data;
@@ -67,18 +67,6 @@ const App: FC = () => {
       result.destination.index
     );
 
-    // let add: Todo;
-    // let list = todos;
-
-    // if (source.droppableId === 'TodoList') {
-    //   add = list[source.index];
-    //   list.splice(source.index, 1);
-    // }
-
-    // if (destination.droppableId === 'TodoList') {
-    //   list.splice(destination.index, 0, add);
-    // }
-
     setTodos(tasks);
   };
 
@@ -86,12 +74,8 @@ const App: FC = () => {
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="app">
         <div className="page">
-          <Header />
-          <TodoForm
-            addTodo={addTodo}
-            newTodo={newTodo}
-            setNewTodo={setNewTodo}
-          />
+          <MyHead />
+          <MyForm addTodo={addTodo} newTodo={newTodo} setNewTodo={setNewTodo} />
           {/* передать onDragStart/Over/Drop итемам */}
           <TodoList todos={todos} toggleTodo={toggleTodo} remove={removeTodo} />
         </div>

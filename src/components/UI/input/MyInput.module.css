@@ -1,0 +1,37 @@
+
+.inputContainer {
+  position: relative;
+  margin: 10px 0 10px;
+}
+
+.inputContainer label {
+  position: absolute;
+  top: 15%;
+  left: 27%;
+  font-size: 16px;
+  pointer-events: none;
+  color: grey;
+  transition: all 0.5s ease-in-out;
+}
+.inputContainer input {
+  width: 50%;
+  background: var(--transparent-grey);
+  border: 0;
+  border-radius: 8px;
+  border-bottom: 1px solid var(--light-pink);
+  padding: 8px 0 5px 0;
+  color: var(--text-color);
+}
+
+.inputContainer input:focus {
+  border:none;
+  outline: none;
+  border-bottom: 1px solid var(--light-cyan);
+}
+
+.inputContainer input:focus ~ label,
+.inputContainer input:not(:placeholder-shown) ~ label{
+  top: -45%;
+  font-size: 12px;
+  color: var(--text-color);
+}

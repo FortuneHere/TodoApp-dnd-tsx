@@ -1,7 +1,7 @@
 import React, { FC, FormEvent } from 'react';
-import Button from '../UI/button/Button';
+import MyButton from '../UI/button/MyButton';
 import MyInput from '../UI/input/MyInput';
-import cl from './TodoForm.module.css';
+import cl from './MyForm.module.css';
 
 interface Props {
   addTodo: AddTodo;
@@ -9,7 +9,7 @@ interface Props {
   setNewTodo: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const TodoForm: FC<Props> = ({ newTodo, setNewTodo, addTodo }) => {
+const MyForm: FC<Props> = ({ newTodo, setNewTodo, addTodo }) => {
   const handleClear = (e: FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setNewTodo('');
@@ -22,12 +22,16 @@ const TodoForm: FC<Props> = ({ newTodo, setNewTodo, addTodo }) => {
   };
 
   return (
-    <form className={cl.myForm}>
+    <form className={cl.form}>
       <MyInput newTodo={newTodo} setNewTodo={setNewTodo} />
-      <Button onClick={handleSubmit}>Post</Button>
-      <Button onClick={handleClear}>X</Button>
+      <MyButton className={cl.btn__submit} onClick={handleSubmit}>
+        Post
+      </MyButton>
+      <MyButton className={cl.btn__clear} onClick={handleClear}>
+        X
+      </MyButton>
     </form>
   );
 };
 
-export default TodoForm;
+export default MyForm;

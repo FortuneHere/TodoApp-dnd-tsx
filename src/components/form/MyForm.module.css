@@ -1,0 +1,16 @@
+.form {
+  position: relative;
+  /* border: 1px solid green; */
+}
+
+.form .btn__submit {
+  position: absolute;
+  bottom: 30%;
+  right: 26%;
+}
+
+.form .btn__clear {
+  position: absolute;
+  bottom: 30%;
+  right: 31%;
+}

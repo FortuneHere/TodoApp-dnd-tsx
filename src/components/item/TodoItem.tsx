@@ -1,7 +1,7 @@
 import React, { FC, FormEvent } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
-import Button from '../UI/button/Button';
-import cl from './TodoListItem.module.css';
+import MyButton from '../UI/button/MyButton';
+import cl from './TodoItem.module.css';
 
 interface Props {
   todo: Todo;
@@ -9,12 +9,7 @@ interface Props {
   toggleTodo: ToggleTodo;
   removeTodoItem: RemoveTodo;
 }
-const TodoListItem: FC<Props> = ({
-  todo,
-  index,
-  toggleTodo,
-  removeTodoItem,
-}) => {
+const TodoItem: FC<Props> = ({ todo, index, toggleTodo, removeTodoItem }) => {
   const handleRemove = (e: FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     removeTodoItem(todo);
@@ -43,13 +38,13 @@ const TodoListItem: FC<Props> = ({
               {todo.task}
             </p>
           </div>
-          <Button onClick={handleRemove}>
+          <MyButton onClick={handleRemove}>
             <i>-</i>
-          </Button>
+          </MyButton>
         </div>
       )}
     </Draggable>
   );
 };
 
-export default TodoListItem;
+export default TodoItem;
