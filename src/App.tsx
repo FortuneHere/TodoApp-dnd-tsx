@@ -76,7 +76,6 @@ const App: FC = () => {
         <div className="page">
           <MyHead />
           <MyForm addTodo={addTodo} newTodo={newTodo} setNewTodo={setNewTodo} />
-          {/* передать onDragStart/Over/Drop итемам */}
           <TodoList todos={todos} toggleTodo={toggleTodo} remove={removeTodo} />
         </div>
       </div>

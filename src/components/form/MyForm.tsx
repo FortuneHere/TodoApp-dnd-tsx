@@ -16,9 +16,18 @@ const MyForm: FC<Props> = ({ newTodo, setNewTodo, addTodo }) => {
   };
 
   const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    addTodo(newTodo);
-    setNewTodo('');
+    try {
+      e.preventDefault();
+      if (newTodo.trim().length > 30) {
+        throw new Error('String must have less than 30 symbols');
+      }
+      addTodo(newTodo);
+      setNewTodo('');
+    } catch (err) {
+      if (err instanceof Error) {
+        setNewTodo(err.message);
+      }
+    }
   };
 
   return (

@@ -7,9 +7,9 @@ const MyHead = () => {
   return (
     <div className={cl.head}>
       <h1 className={cl.title}>
-        Todo list
+        Todo list.
         <span>
-          .tsx <BiNotepad id={cl['notepad']} />
+          tsx <BiNotepad id={cl['notepad']} />
           <SiReact id={cl['react']} />
           <SiTypescript id={cl['typescript']} />
         </span>
