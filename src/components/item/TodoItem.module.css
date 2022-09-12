@@ -1,9 +1,27 @@
-/* TodoListItem */
 .todoItem {
   display: flex;
-  justify-content: center;
+  position: relative;
   align-items:center;
   height: 50px;
   color: var(--text-color);
-  border-top: 1px solid var(--foreground-highlight);
+  /* border: 1px solid red; */
+}
+
+.todoItem > .todoItem__name {
+  flex-grow: 1;
+}
+
+.isCompleted {
+  text-decoration: line-through;
+}
+
+.todoItem_Btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 3;
+  transform: translateX(-10px);
+  transform: translateY(-5px);
+  align-items: baseline;
+  /* border: 1px solid green; */
 }

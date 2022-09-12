@@ -1,5 +1,6 @@
 import React, { FC, FormEvent } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
+import { BiTrash } from 'react-icons/bi';
 import MyButton from '../UI/button/MyButton';
 import cl from './TodoItem.module.css';
 
@@ -14,6 +15,8 @@ const TodoItem: FC<Props> = ({ todo, index, toggleTodo, removeTodoItem }) => {
     e.preventDefault();
     removeTodoItem(todo);
   };
+  // We have to use it, cause of CSS module
+  const completedClass = todo.complete ? cl.isCompleted : '';
 
   return (
     <Draggable draggableId={todo.id.toString()} index={index}>
@@ -29,17 +32,11 @@ const TodoItem: FC<Props> = ({ todo, index, toggleTodo, removeTodoItem }) => {
             checked={todo.complete}
             onChange={() => toggleTodo(todo)}
           />{' '}
-          <div>
-            <p
-              style={{
-                textDecoration: todo.complete ? 'line-through' : undefined,
-              }}
-            >
-              {todo.task}
-            </p>
+          <div className={`${cl.todoItem__name} ${completedClass}`}>
+            <p>{todo.task}</p>
           </div>
-          <MyButton onClick={handleRemove}>
-            <i>-</i>
+          <MyButton className={cl.todoItem_Btn} onClick={handleRemove}>
+            <BiTrash size={24} />
           </MyButton>
         </div>
       )}

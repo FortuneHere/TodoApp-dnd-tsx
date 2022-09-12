@@ -1,6 +1,7 @@
 import React, { FC, FormEvent } from 'react';
 import MyButton from '../UI/button/MyButton';
 import MyInput from '../UI/input/MyInput';
+import { BiTask, BiX } from 'react-icons/bi';
 import cl from './MyForm.module.css';
 
 interface Props {
@@ -32,12 +33,16 @@ const MyForm: FC<Props> = ({ newTodo, setNewTodo, addTodo }) => {
 
   return (
     <form className={cl.form}>
-      <MyInput newTodo={newTodo} setNewTodo={setNewTodo} />
+      <MyInput
+        className={cl.myInput}
+        newTodo={newTodo}
+        setNewTodo={setNewTodo}
+      />
       <MyButton className={cl.btn__submit} onClick={handleSubmit}>
-        Post
+        <BiTask />
       </MyButton>
       <MyButton className={cl.btn__clear} onClick={handleClear}>
-        X
+        <BiX />
       </MyButton>
     </form>
   );

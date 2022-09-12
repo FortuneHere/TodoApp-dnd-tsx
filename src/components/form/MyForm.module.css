@@ -1,16 +1,44 @@
 .form {
   position: relative;
+  padding: 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  box-shadow: 0 2px 1px var(--shadow);
   /* border: 1px solid green; */
+
+}
+
+.form .myInput {
+  height: 30px;
+  width: 100%;
+  padding: 8px 70px 8px 12px;
 }
 
 .form .btn__submit {
   position: absolute;
-  bottom: 30%;
-  right: 26%;
+  top: 26px;
+  right: 15px;
+  z-index: 2;
+  transform: translateX(3px);
+  height: 26px;
+
+  /* border: 1px solid green; */
 }
 
 .form .btn__clear {
   position: absolute;
-  bottom: 30%;
-  right: 31%;
+  top: 26px;
+  right: 15px;
+  z-index: 3;
+  transform: translateX(-20px);
+  height: 26px;
+
+  /* border: 1px solid green; */
 }
+
+/* @media screen and (max-width: 730px){
+  .form .myInput{
+      width: 250px;
+  }
+
+} */

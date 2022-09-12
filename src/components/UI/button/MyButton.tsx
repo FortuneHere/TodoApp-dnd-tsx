@@ -1,4 +1,5 @@
 import React, { FC, FormEvent } from 'react';
+import cl from './MyButton.module.css';
 
 interface Props {
   children?: React.ReactNode;
@@ -6,11 +7,13 @@ interface Props {
   className?: string;
 }
 
-const MyButton: FC<Props> = ({ children, ...props }: Props) => {
+const MyButton: FC<Props> = ({ children, className, onClick }: Props) => {
   return (
-    <button className={props.className} onClick={props.onClick}>
-      {children}
-    </button>
+    <div className={className}>
+      <button className={cl.myBtn} onClick={onClick}>
+        {children}
+      </button>
+    </div>
   );
 };
 

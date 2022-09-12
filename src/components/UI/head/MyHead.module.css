@@ -1,17 +1,25 @@
 #notepad {
-  color: var(--light-pink)
+  color: var(--light-pink);
 }
 
 #react {
   color: var(--light-cyan);
 }
 
-#typescript{
+#typescript {
   color: var(--light-blue);
+}
+
+.head {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 .head .title {
   padding-top: 2%;
+  font-size: 24px;
   text-align: center;
   color: var(--text-color);
   font-weight: 700;
@@ -21,4 +29,3 @@
   color: var(--light-blue);
   font-weight: 700;
 }
-

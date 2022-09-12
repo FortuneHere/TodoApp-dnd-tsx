@@ -1,5 +1,6 @@
 .list{
-  display: inline-block;
-  border: 2px solid black;
-  width: 50vh;
+  /* border: 2px solid black; */
+  overflow-y: scroll;
+  max-height: 60vh;
+
 }
