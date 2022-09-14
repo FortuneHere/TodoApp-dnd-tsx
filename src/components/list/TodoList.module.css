@@ -1,6 +1,25 @@
-.list{
+.list {
   /* border: 2px solid black; */
   overflow-y: scroll;
+  border-radius: 10px;
+  scrollbar-color: var(--background) var(--input);
   max-height: 60vh;
+}
 
+.list__head {
+  display: flex;
+  color: gray;
+  padding-top: 10px;
+}
+
+.blank {
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 780px) {
+  .blank {
+    font-size: 12px;
+  }
 }

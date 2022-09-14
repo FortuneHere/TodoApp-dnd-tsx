@@ -9,4 +9,3 @@ type ToggleTodo = (selectedTodo: Todo) => void;
 type AddTodo = (task: string) => void;
 
 type RemoveTodo = (todo: Todo) => void;
-

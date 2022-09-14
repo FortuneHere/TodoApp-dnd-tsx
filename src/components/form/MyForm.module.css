@@ -4,14 +4,14 @@
   margin-bottom: 10px;
   justify-content: space-between;
   box-shadow: 0 2px 1px var(--shadow);
+  border-radius: 10px;
   /* border: 1px solid green; */
-
 }
 
 .form .myInput {
   height: 30px;
   width: 100%;
-  padding: 8px 70px 8px 12px;
+  /* padding: 8px 70px 8px 12px; */
 }
 
 .form .btn__submit {
@@ -21,7 +21,6 @@
   z-index: 2;
   transform: translateX(3px);
   height: 26px;
-
   /* border: 1px solid green; */
 }
 
@@ -35,10 +34,3 @@
 
   /* border: 1px solid green; */
 }
-
-/* @media screen and (max-width: 730px){
-  .form .myInput{
-      width: 250px;
-  }
-
-} */

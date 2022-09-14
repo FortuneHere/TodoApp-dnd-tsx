@@ -1,27 +1,40 @@
 .todoItem {
   display: flex;
   position: relative;
-  align-items:center;
-  height: 50px;
+  align-items: center;
+  height: 8vh;
+  background-color: var(--foreground);
   color: var(--text-color);
+  border-bottom: 1px dashed var(--background);
+  box-shadow: 1px 2px 2px var(--shadow);
+  transition: background-color 2s, color 2s;
   /* border: 1px solid red; */
 }
 
 .todoItem > .todoItem__name {
   flex-grow: 1;
+  font-size: 16px;
 }
 
 .isCompleted {
+  background-color: var(--checked-item);
+  color: var(--checked-text);
   text-decoration: line-through;
 }
 
 .todoItem_Btn {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  right: 15px;
   z-index: 3;
-  transform: translateX(-10px);
-  transform: translateY(-5px);
   align-items: baseline;
   /* border: 1px solid green; */
+}
+
+@media screen and (max-width: 780px) {
+  .todoItem {
+    height: 8vh;
+  }
+  .todoItem > .todoItem__name {
+    font-size: 12px;
+  }
 }

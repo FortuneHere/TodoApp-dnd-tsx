@@ -1,13 +1,13 @@
 #notepad {
-  color: var(--light-pink);
+  color: var(--background);
 }
 
 #react {
-  color: var(--light-cyan);
+  color: var(--icon-react);
 }
 
 #typescript {
-  color: var(--light-blue);
+  color: var(--icon-typescript);
 }
 
 .head {
@@ -18,7 +18,6 @@
 }
 
 .head .title {
-  padding-top: 2%;
   font-size: 24px;
   text-align: center;
   color: var(--text-color);
@@ -26,6 +25,12 @@
 }
 
 .title span {
-  color: var(--light-blue);
+  color: var(--icon-typescript);
   font-weight: 700;
+}
+
+@media screen and (max-width: 780px) {
+  .head .title {
+    font-size: 14px;
+  }
 }

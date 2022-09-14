@@ -11,26 +11,34 @@ interface Props {
 
 const TodoList: FC<Props> = ({ todos, toggleTodo, remove }) => {
   return (
-    <Droppable droppableId="TodoList">
-      {(provided, snapshot) => (
-        <div
-          className={cl.list}
-          ref={provided.innerRef}
-          {...provided.droppableProps}
-        >
-          {todos.map((todo, index) => (
-            <TodoItem
-              index={index}
-              key={todo.id}
-              todo={todo}
-              toggleTodo={toggleTodo}
-              removeTodoItem={remove}
-            />
-          ))}
-          {provided.placeholder}
+    <div>
+      {todos.length !== 0 ? (
+        <Droppable droppableId="TodoList">
+          {(provided, snapshot) => (
+            <div
+              className={cl.list}
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+            >
+              {todos.map((todo, index) => (
+                <TodoItem
+                  index={index}
+                  key={todo.id}
+                  todo={todo}
+                  toggleTodo={toggleTodo}
+                  removeTodoItem={remove}
+                />
+              ))}
+              {provided.placeholder}
+            </div>
+          )}
+        </Droppable>
+      ) : (
+        <div className={cl.list__head}>
+          <span className={cl.blank}>Looks like you don't have any.</span>
         </div>
       )}
-    </Droppable>
+    </div>
   );
 };
 

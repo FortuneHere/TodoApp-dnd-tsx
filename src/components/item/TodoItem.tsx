@@ -22,17 +22,20 @@ const TodoItem: FC<Props> = ({ todo, index, toggleTodo, removeTodoItem }) => {
     <Draggable draggableId={todo.id.toString()} index={index}>
       {(provided, snapshot) => (
         <div
-          className={cl.todoItem}
+          className={`${cl.todoItem} ${completedClass}`}
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
         >
-          <input
-            type="checkbox"
-            checked={todo.complete}
-            onChange={() => toggleTodo(todo)}
-          />{' '}
-          <div className={`${cl.todoItem__name} ${completedClass}`}>
+          <div className={cl.checkboxOne}>
+            <input
+              type="checkbox"
+              id={cl['checkboxOneInput']}
+              checked={todo.complete}
+              onChange={() => toggleTodo(todo)}
+            />{' '}
+          </div>
+          <div className={cl.todoItem__name}>
             <p>{todo.task}</p>
           </div>
           <MyButton className={cl.todoItem_Btn} onClick={handleRemove}>

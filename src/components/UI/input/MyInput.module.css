@@ -1,4 +1,3 @@
-
 .inputContainer {
   position: relative;
   margin: 10px 0 10px;
@@ -14,22 +13,28 @@
   transition: all 0.5s ease-in-out;
 }
 .inputContainer input {
-  background: var(--transparent-grey);
+  background: var(--input);
   border: 0;
-  border-radius: 8px;
-  border-bottom: 1px solid var(--light-pink);
+  border-radius: 10px;
+  border-bottom: 1px solid var(--background);
   padding: 8px 0 5px 0;
   color: var(--text-color);
 }
 
 .inputContainer input:focus {
-  border:none;
+  /* border:none; */
   outline: none;
-  border-bottom: 1px solid var(--light-cyan);
+  border-bottom: 1px solid var(--icon-react);
 }
 
 .inputContainer input:focus ~ label,
-.inputContainer input:not(:placeholder-shown) ~ label{
+.inputContainer input:not(:placeholder-shown) ~ label {
   top: -45%;
   font-size: 12px;
+}
+
+@media screen and (max-width: 780px) {
+  .inputContainer label {
+    font-size: 12px;
+  }
 }

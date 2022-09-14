@@ -3,10 +3,11 @@
   --foreground: #fefefe;
   --text-color: #262626;
   --shadow: #333333;
-  --light-cyan: #76c5d6;
-  --light-pink: #e65e72;
-  --light-blue: #0c5da9;
-  --transparent-grey: #f3f3f3;
+  --icon-react: #76c5d6;
+  --icon-typescript: #0c5da9;
+  --input: #f3f3f3;
+  --checked-text: #8e8e8e;
+  --checked-item: #bdbdbd;
 }
 
 *,
@@ -15,38 +16,47 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 div,
 input,
 p,
 h1,
 span {
   text-align: center;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .app {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-
-  position: relative;
   background: var(--background);
-  background-position: center;
-  background-size: cover;
-  width: 100vw;
   height: 100vh;
-  padding: 15px;
-  margin: -8px;
+  width: 100vw;
 }
 
 .page {
   background: var(--foreground);
-  width: 60%;
-  border-radius: 8px;
+  width: 100%;
+  border-radius: 10px;
   box-shadow: 0 5px 5px var(--shadow);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 780px) {
+  .app .page {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 780px) {
   .app .page {
     width: 350px;
   }

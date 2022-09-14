@@ -12,41 +12,21 @@
   {
     "id": 3,
     "task": "Learn Redux",
-    "complete": false
+    "complete": true
   },
   {
     "id": 4,
+    "task": "Get a degree",
+    "complete": true
+  },
+  {
+    "id": 5,
     "task": "Find a job",
     "complete": false
   },
   {
-    "id": 5,
-    "task": "Change light bulbs",
-    "complete": false
-  },
-  {
     "id": 6,
-    "task": "Go to Store",
-    "complete": true
-  },
-  {
-    "id": 7,
-    "task": "Fill gas tank",
-    "complete": true
-  },
-  {
-    "id": 8,
-    "task": "Change linens",
-    "complete": false
-  },
-  {
-    "id": 9,
-    "task": "Rake leaves",
-    "complete": true
-  },
-  {
-    "id": 10,
-    "task": "Bake Cookies",
+    "task": "Learn Vue",
     "complete": false
   }
 ]
