@@ -3,7 +3,8 @@ Tried my best to do somewhat appealing and doing it's job application.
 Although theres a lot of features could be added, I wanted it to be done with already.
 Hope some people could use it as a template and be usefull.
 # Screenshots
-![Todolist-tsx-1920-1080](https://user-images.githubusercontent.com/97908844/190393731-8263f2ed-b5bf-4c44-99f1-926832c93129.png)
+![image](https://user-images.githubusercontent.com/97908844/190424748-a318f857-f5ea-4d10-98a6-41de66e0c77f.png)
+
 
 # Info
 This app was created using `create-react-app`
