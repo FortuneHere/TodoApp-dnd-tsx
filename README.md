@@ -4,7 +4,6 @@ Although theres a lot of features could be added, I wanted it to be done with al
 Hope some people could use it as a template and be usefull.
 # Screenshots
 ![Todolist-tsx-1920-1080](https://user-images.githubusercontent.com/97908844/190393731-8263f2ed-b5bf-4c44-99f1-926832c93129.png)
-![Todolist-tsx-460-900](https://user-images.githubusercontent.com/97908844/190394223-6b512f04-e87d-4970-87da-5e32b0f26902.png)
 
 # Info
 This app was created using `create-react-app`
