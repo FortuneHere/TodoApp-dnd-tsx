@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   align-items: center;
-  height: 8vh;
+  height: 50px;
   background-color: var(--foreground);
   color: var(--text-color);
   border-bottom: 1px dashed var(--background);
@@ -37,6 +37,12 @@ input[type='checkbox'] {
   /* border: 1px solid green; */
 }
 
+/* @media screen and (min-width: 780px) {
+  .todoItem {
+    height: 6vh;
+  }
+}
+
 @media screen and (max-width: 780px) {
   .todoItem {
     height: 8vh;
@@ -44,4 +50,4 @@ input[type='checkbox'] {
   .todoItem > .todoItem__name {
     font-size: 12px;
   }
-}
+} */

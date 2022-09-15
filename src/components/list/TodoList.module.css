@@ -4,7 +4,7 @@
   overflow-y: scroll;
   border-radius: 10px;
   scrollbar-color: var(--background) var(--input);
-  max-height: 60vh;
+  max-height: 90vh;
 }
 
 .list__head {
@@ -19,8 +19,14 @@
   padding: 0 8px;
 }
 
+/* @media screen and (min-width: 780px) {
+  .list {
+    height: 6vh;
+  }
+}
+
 @media screen and (max-width: 780px) {
   .blank {
     font-size: 12px;
   }
-}
+} */
