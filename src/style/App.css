@@ -47,6 +47,7 @@ span {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 5px 5px var(--shadow);
+  margin-top: 10px;
 }
 
 
