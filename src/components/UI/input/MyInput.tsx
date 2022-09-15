@@ -4,10 +4,9 @@ import cl from './MyInput.module.css';
 interface Props {
   newTodo: string;
   setNewTodo: Dispatch<SetStateAction<string>>;
-  className: string;
 }
 
-const MyInput: FC<Props> = ({ newTodo, setNewTodo, className }) => {
+const MyInput: FC<Props> = ({ newTodo, setNewTodo }) => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setNewTodo(e.target.value);
   };
@@ -15,7 +14,6 @@ const MyInput: FC<Props> = ({ newTodo, setNewTodo, className }) => {
   return (
     <div className={cl.inputContainer}>
       <input
-        className={className}
         type="text"
         // placeholder triggers label CSS animation
         placeholder=" "

@@ -8,12 +8,6 @@
   /* border: 1px solid green; */
 }
 
-.form .myInput {
-  height: 30px;
-  width: 100%;
-  /* padding: 8px 70px 8px 12px; */
-}
-
 .form .btn__submit {
   position: absolute;
   top: 26px;
@@ -31,6 +25,5 @@
   z-index: 3;
   transform: translateX(-20px);
   height: 26px;
-
   /* border: 1px solid green; */
 }

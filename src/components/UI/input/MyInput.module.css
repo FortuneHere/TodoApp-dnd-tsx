@@ -19,6 +19,10 @@
   border-bottom: 1px solid var(--background);
   padding: 8px 0 5px 0;
   color: var(--text-color);
+
+  height: 30px;
+  width: 100%;
+  padding: 8px 60px 8px 12px;
 }
 
 .inputContainer input:focus {
@@ -34,6 +38,10 @@
 }
 
 @media screen and (max-width: 780px) {
+  .inputContainer input {
+    font-size: 12px;
+  }
+  
   .inputContainer label {
     font-size: 12px;
   }

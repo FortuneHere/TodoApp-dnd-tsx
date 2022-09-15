@@ -33,11 +33,7 @@ const MyForm: FC<Props> = ({ newTodo, setNewTodo, addTodo }) => {
 
   return (
     <form className={cl.form}>
-      <MyInput
-        className={cl.myInput}
-        newTodo={newTodo}
-        setNewTodo={setNewTodo}
-      />
+      <MyInput newTodo={newTodo} setNewTodo={setNewTodo} />
       <MyButton className={cl.btn__submit} onClick={handleSubmit}>
         <BiTask />
       </MyButton>

@@ -36,7 +36,6 @@ span {
 .app {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background: var(--background);
   height: 100vh;
@@ -50,6 +49,7 @@ span {
   box-shadow: 0 5px 5px var(--shadow);
 }
 
+
 @media screen and (min-width: 780px) {
   .app .page {
     width: 600px;
@@ -58,6 +58,6 @@ span {
 
 @media screen and (max-width: 780px) {
   .app .page {
-    width: 350px;
+    width: 325px;
   }
 }

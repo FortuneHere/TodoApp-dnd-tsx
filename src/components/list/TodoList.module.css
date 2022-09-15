@@ -1,5 +1,6 @@
 .list {
   /* border: 2px solid black; */
+  position: relative;
   overflow-y: scroll;
   border-radius: 10px;
   scrollbar-color: var(--background) var(--input);
