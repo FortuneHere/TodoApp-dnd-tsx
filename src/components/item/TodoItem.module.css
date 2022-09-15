@@ -11,9 +11,16 @@
   /* border: 1px solid red; */
 }
 
+input[type='checkbox'] {
+  cursor: pointer;
+}
 .todoItem > .todoItem__name {
   flex-grow: 1;
   font-size: 16px;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 .isCompleted {
@@ -37,5 +44,4 @@
   .todoItem > .todoItem__name {
     font-size: 12px;
   }
-
 }

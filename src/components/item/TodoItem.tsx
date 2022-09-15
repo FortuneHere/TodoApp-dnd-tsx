@@ -30,7 +30,6 @@ const TodoItem: FC<Props> = ({ todo, index, toggleTodo, removeTodoItem }) => {
           <div className={cl.checkboxOne}>
             <input
               type="checkbox"
-              id={cl['checkboxOneInput']}
               checked={todo.complete}
               onChange={() => toggleTodo(todo)}
             />{' '}
