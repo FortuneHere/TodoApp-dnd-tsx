@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TodoApp-dnd-tsx/static/css/main.f53b2c37.css",
+    "main.js": "/TodoApp-dnd-tsx/static/js/main.ba688a54.js",
+    "index.html": "/TodoApp-dnd-tsx/index.html",
+    "main.f53b2c37.css.map": "/TodoApp-dnd-tsx/static/css/main.f53b2c37.css.map",
+    "main.ba688a54.js.map": "/TodoApp-dnd-tsx/static/js/main.ba688a54.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f53b2c37.css",
+    "static/js/main.ba688a54.js"
+  ]
+}
