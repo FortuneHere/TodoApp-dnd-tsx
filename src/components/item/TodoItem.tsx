@@ -1,8 +1,8 @@
-import React, { FC, FormEvent } from 'react';
-import { Draggable } from 'react-beautiful-dnd';
-import { BiTrash } from 'react-icons/bi';
-import MyButton from '../UI/button/MyButton';
-import cl from './TodoItem.module.css';
+import React, { FC, FormEvent } from "react";
+import { Draggable } from "react-beautiful-dnd";
+import { BiTrash } from "react-icons/bi";
+import MyButton from "../UI/button/MyButton";
+import cl from "./TodoItem.module.css";
 
 interface Props {
   todo: Todo;
@@ -16,7 +16,7 @@ const TodoItem: FC<Props> = ({ todo, index, toggleTodo, removeTodoItem }) => {
     removeTodoItem(todo);
   };
   // We have to use it, cause of CSS module
-  const completedClass = todo.complete ? cl.isCompleted : '';
+  const completedClass = todo.complete ? cl.isCompleted : "";
 
   return (
     <Draggable draggableId={todo.id.toString()} index={index}>
@@ -32,7 +32,7 @@ const TodoItem: FC<Props> = ({ todo, index, toggleTodo, removeTodoItem }) => {
               type="checkbox"
               checked={todo.complete}
               onChange={() => toggleTodo(todo)}
-            />{' '}
+            />{" "}
           </div>
           <div className={cl.todoItem__name}>
             <p>{todo.task}</p>

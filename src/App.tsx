@@ -1,12 +1,12 @@
-import React, { FC, useState } from 'react';
-import './style/App.css';
-import data from './data.json';
-import TodoList from './components/list/TodoList';
-import MyForm from './components/form/MyForm';
-import MyHead from './components/UI/head/MyHead';
-import { DragDropContext, DropResult } from 'react-beautiful-dnd';
+import React, { FC, useEffect, useState } from "react";
+import "./style/App.css";
+// import data from "./data.json";
+import TodoList from "./components/list/TodoList";
+import MyForm from "./components/form/MyForm";
+import MyHead from "./components/UI/head/MyHead";
+import { DragDropContext, DropResult } from "react-beautiful-dnd";
 
-const initialTodos: Todo[] = data;
+// const initialTodos: Todo[] = data;
 
 // a little function to help us with reordering the result
 const reorder = (
@@ -23,12 +23,24 @@ const reorder = (
 
 const App: FC = () => {
   // All todos list
-  const [todos, setTodos] = useState<Todo[]>(initialTodos);
-  const [newTodo, setNewTodo] = useState<string>('');
+  const [todos, setTodos] = useState<Todo[]>(() => {
+    const savedTodos = localStorage.getItem("SavedTodos");
+    if (savedTodos) {
+      return JSON.parse(savedTodos);
+    } else {
+      return [];
+    }
+  });
+
+  const [newTodo, setNewTodo] = useState<string>("");
+
+  useEffect(() => {
+    localStorage.setItem("SavedTodos", JSON.stringify(todos));
+  }, [todos]);
 
   // Creating new todo item
   const addTodo: AddTodo = (newTodo) => {
-    newTodo.trim() !== '' &&
+    newTodo.trim() !== "" &&
       setTodos([
         ...todos,
         {
@@ -56,7 +68,7 @@ const App: FC = () => {
   };
 
   const onDragEnd = (result: DropResult) => {
-    // droppped outisde the list
+    // droppped item outisde the list
     if (!result.destination) {
       return;
     }

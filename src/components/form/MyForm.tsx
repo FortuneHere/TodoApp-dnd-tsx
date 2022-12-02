@@ -1,8 +1,8 @@
-import React, { FC, FormEvent } from 'react';
-import MyButton from '../UI/button/MyButton';
-import MyInput from '../UI/input/MyInput';
-import { BiTask, BiX } from 'react-icons/bi';
-import cl from './MyForm.module.css';
+import React, { FC, FormEvent } from "react";
+import MyButton from "../UI/button/MyButton";
+import MyInput from "../UI/input/MyInput";
+import { BiTask, BiX } from "react-icons/bi";
+import cl from "./MyForm.module.css";
 
 interface Props {
   addTodo: AddTodo;
@@ -13,17 +13,17 @@ interface Props {
 const MyForm: FC<Props> = ({ newTodo, setNewTodo, addTodo }) => {
   const handleClear = (e: FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    setNewTodo('');
+    setNewTodo("");
   };
 
   const handleSubmit = (e: FormEvent) => {
     try {
       e.preventDefault();
       if (newTodo.trim().length > 30) {
-        throw new Error('String must have less than 30 symbols');
+        throw new Error("String must have less than 30 symbols");
       }
       addTodo(newTodo);
-      setNewTodo('');
+      setNewTodo("");
     } catch (err) {
       if (err instanceof Error) {
         setNewTodo(err.message);
