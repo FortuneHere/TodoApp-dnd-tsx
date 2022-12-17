@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/TodoApp-dnd-tsx/static/css/main.f53b2c37.css",
-    "main.js": "/TodoApp-dnd-tsx/static/js/main.bd6fc668.js",
+    "main.css": "/TodoApp-dnd-tsx/static/css/main.8091611e.css",
+    "main.js": "/TodoApp-dnd-tsx/static/js/main.928ce354.js",
     "index.html": "/TodoApp-dnd-tsx/index.html",
-    "main.f53b2c37.css.map": "/TodoApp-dnd-tsx/static/css/main.f53b2c37.css.map",
-    "main.bd6fc668.js.map": "/TodoApp-dnd-tsx/static/js/main.bd6fc668.js.map"
+    "main.8091611e.css.map": "/TodoApp-dnd-tsx/static/css/main.8091611e.css.map",
+    "main.928ce354.js.map": "/TodoApp-dnd-tsx/static/js/main.928ce354.js.map"
   },
   "entrypoints": [
-    "static/css/main.f53b2c37.css",
-    "static/js/main.bd6fc668.js"
+    "static/css/main.8091611e.css",
+    "static/js/main.928ce354.js"
   ]
 }
